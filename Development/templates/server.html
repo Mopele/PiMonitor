@@ -1,0 +1,60 @@
+{% extends "main_template.html" %}
+{% block title %}Server{% endblock %}
+{% set active_page = "server" %}
+{% block html_head %}
+{{ js_resources|indent(4)|safe }}
+{{ css_resources|indent(4)|safe }}
+{{ plot_script[0]|indent(4)|safe }}
+{{ plot_script[1]|indent(4)|safe }}
+{{ plot_script[2]|indent(4)|safe }}
+{% endblock %}
+{% block content %}
+<!-- row -->
+<div class="row">
+    <!-- Col -->
+    <div class="col-lg-6 mb-4 mt-2">
+        <div class="card h-100">
+            <div class="card-body">
+                {{ plot_div[0]|indent(4)|safe }}
+            </div>
+        </div>
+    </div>
+    <!-- ./ Col -->
+    <!-- Col -->
+    <div class="col-lg-6 mb-2">
+        <div class="card h-100">
+            <div class="card-body">
+                {{ plot_div[1]|indent(4)|safe }}
+            </div>
+        </div>
+    </div>
+    <!-- ./ Col -->
+</div>
+<!-- /.row -->
+<!-- row -->
+<div class="row">
+    <!-- Col -->
+    <div class="col-lg-6 mb-2">
+        <div class="card h-100">
+            <div class="card-body">
+                {{ plot_div[2]|indent(4)|safe }}
+            </div>
+        </div>
+    </div>
+    <!-- ./ Col -->
+    <!-- Col -->
+    <div class="col-lg-6 mb-2">
+        <div class="card h-100">
+            <div class="card-body">
+                <div class="overflow-auto">
+                    {% for line in outlines%}
+                    <p class="h10">{{ line }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ Col -->
+</div>
+<!-- /.row -->
+{% endblock %}
