@@ -184,5 +184,5 @@ def flask_log(process, message, color, code, flashmsg, flashtype, redir):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host=0.0.0.0, port=8080)
 # author: Moritz Pfennig
