@@ -37,7 +37,7 @@ from bokeh.models.sources import AjaxDataSource, CustomJS
 
 app = Flask(__name__)
 app.secret_key = "tpsecret..."
-logpath = "testlog.log"  # "/home/pi/Documents/mainlog.log"
+logpath = "testlog.log"#"/home/pi/Documents/GoodYear-TestBench/Development/logging/mainlog.log"
 
 
 class AjaxFilter(logging.Filter):
@@ -184,5 +184,5 @@ def flask_log(process, message, color, code, flashmsg, flashtype, redir):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host=0.0.0.0, port=8080)
+    app.run(debug=True, host="0.0.0.0", port=8080)
 # author: Moritz Pfennig
