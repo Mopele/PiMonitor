@@ -54,3 +54,5 @@ sudo journalctl -f -u pimonitor.service
 
 ## Frequent errors:
 On the raspberry you can encounter an error qith numpy. The error is because of a failed extension of c and can be resoved with `sudo apt-get install libatlas-base-dev` installing the extension.
+
+Also common is the FileNotFoundError, in wich the logfile is not found. Then maybe modify the line in the serv.py where the logfile is set and dont use a relative path to the logfile!
