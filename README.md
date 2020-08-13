@@ -52,3 +52,5 @@ sudo systemctl stop pimonitor.service
 sudo journalctl -f -u pimonitor.service
 ```
 
+## Frequent errors:
+On the raspberry you can encounter an error qith numpy. The error is because of a failed extension of c and can be resoved with `sudo apt-get install libatlas-base-dev` installing the extension.
