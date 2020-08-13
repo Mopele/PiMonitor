@@ -37,7 +37,7 @@ from bokeh.models.sources import AjaxDataSource, CustomJS
 
 app = Flask(__name__)
 app.secret_key = "tpsecret..."
-logpath = "testlog.log"#"/home/pi/Documents/GoodYear-TestBench/Development/logging/mainlog.log"
+logpath = "/home/pi/Documents/PiMonitor/Development/testlog.log"
 
 
 class AjaxFilter(logging.Filter):
